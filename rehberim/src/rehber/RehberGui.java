@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.MenuBar;
 import java.awt.Panel;
+import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -137,6 +138,7 @@ public class RehberGui extends JFrame implements initRehber {
 					kisiBilgi.setTelefon(txtTelefon.getText());
 
 					vt.update(idDeneme, kisiBilgi.getisim(), kisiBilgi.getsoyisim(), kisiBilgi.getTelefon());
+					temizle(txtisim, txtSoyisim, txtTelefon);
 
 				} else {
 					JOptionPane.showMessageDialog(null, "Eksik Bilgileri Mevcut!");
@@ -163,6 +165,7 @@ public class RehberGui extends JFrame implements initRehber {
 				vt.delete(kisiBilgi.getId());
 				dftModel.setRowCount(0);
 				doldur();
+				temizle(txtisim, txtSoyisim, txtTelefon);
 			}
 		});
 		JMenuItem vcfM = new JMenuItem("VCF Aktar");
@@ -221,6 +224,7 @@ public class RehberGui extends JFrame implements initRehber {
 					vt.insert(kisiBilgi);
 					dftModel.setRowCount(0);
 					doldur();
+					temizle(txtisim, txtSoyisim, txtTelefon);
 				} else {
 					JOptionPane.showMessageDialog(null, "Eksik Bilgileri Mevcut!");
 					// Temizleme yerine imlec bosü olana gitsin yapilabilir. Yapalim =)
@@ -301,5 +305,11 @@ public class RehberGui extends JFrame implements initRehber {
 	public JMenuBar menubar() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public void temizle(JTextField txtisim, JTextField txtSoyisim, JTextField txtTelefon) {
+		txtisim.setText("");
+		txtSoyisim.setText("");
+		txtTelefon.setText("");
 	}
 }
