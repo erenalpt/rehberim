@@ -11,7 +11,7 @@ Artıları
 
 
 Eklenmesi Gerekenler
-* VCF aktarımı
+* VCF import özelliği
 
 
 
