@@ -3,13 +3,16 @@ Fü Otomasyon Rehber Uygulaması
 
 
 Düzeltilecekler
--ScrollBar Problemli
++ ScrollBar Problemli
 
 
 Artıları
 + VCF olarak kayıt çıkartabilme.
 
+
 Eklenmesi Gerekenler
-*VCF aktarımı
+* VCF aktarımı
+
+
 
 ![](rehberimv1.gif)
